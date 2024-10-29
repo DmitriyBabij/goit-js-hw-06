@@ -1,4 +1,4 @@
-class storage {
+class Storage {
     #items;
 
     constructor(items) {
@@ -14,10 +14,7 @@ class storage {
     }
 
     removeItem(itemToRemove) {
-        const item = this.#items.indexOf(itemToRemove);
-        if (item !== -1) {
-            this.#items.splice(item, 1);
-        }
+        this.#items = this.#items.filter(item => item !== itemToRemove);
     }
 
 }
